@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Popularity Predictor{% endblock %}
+
+{% block content %}
+<section class="hero text-center py-5" style="background-color: #f5f1eb;">
+    <div class="container">
+        <h1 class="display-4">Welcome to Popularity Predictor</h1>
+        <p class="lead">Predict the popularity of your content instantly.</p>
+    </div>
+</section>
+
+<section id="predictor" class="text-center py-5" style="background-color: #e7d4b1;">
+    <div class="container">
+        <h2>Predictor</h2>
+        <p>Click below to predict now:</p>
+        <a href="{{ url_for('predict_route') }}" class="btn btn-primary" style="background-color: #618db2; border:none;">Predict the popularity now</a>
+    </div>
+</section>
+
+<section id="contact" class="text-center py-5" style="background-color: #f5f1eb;">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Contact the devs for queries and improvements.</p>
+    </div>
+</section>
+{% endblock %}

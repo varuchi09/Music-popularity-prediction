@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>pros</title>
+</head>
+
+<body>
+    <h2>Professional Input</h2>
+    <form method="POST">
+        {% for name in [
+        'acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness',
+        'loudness', 'speechiness', 'tempo', 'valence', 'duration_ms',
+        'genre', 'key', 'mode', 'time_signature'] %}
+        {{ name }}: <input type="text" name="{{ name }}"><br><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h3>Predicted Popularity: {{ prediction }}</h3>
+    {% endif %}
+    {% if error %}
+    <h3 style="color:red;">{{ error }}</h3>
+    {% endif %}
+</body>
+
+</html>

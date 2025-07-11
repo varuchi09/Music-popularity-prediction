@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Common User Prediction | MusPred</title>
+</head>
+
+<body>
+    <h2>Common User Prediction</h2>
+    <form action="/predict_common" method="post">
+        <label>Genre: <input type="text" name="genre" required></label><br>
+
+        <label>Mood:
+            <select name="mood" required>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="energetic">Energetic</option>
+                <option value="calm">Calm</option>
+            </select>
+        </label><br>
+
+        <label>Tempo Category:
+            <select name="tempo_category" required>
+                <option value="slow">Slow</option>
+                <option value="medium">Medium</option>
+                <option value="fast">Fast</option>
+            </select>
+        </label><br>
+
+        <label>Duration Category:
+            <select name="duration_category" required>
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select>
+        </label><br>
+
+        <button type="submit">Predict Popularity</button>
+    </form>
+</body>
+
+</html>

@@ -29,9 +29,11 @@
             <h1>Welcome to MusPred</h1>
             <p>Smart and realistic music popularity predictor for common users and for professional music producers —
                 powered by AI & data.</p>
-            <form action="/index" method="get" style="align-items: center;">
-                <input type="submit" class="cta-button" value="Start Predicting">
+            <form action="/index" method="get" style="display: flex; flex-direction: row; gap: 25px; justify-content: center;">
+                <button type="submit" name="type" value="pro" class="cta-button">For Professionals</button>
+                <button type="submit" name="type" value="common" class="cta-button">For Common Users</button>
             </form>
+
         </section>
 
         <section id="about" class="section">

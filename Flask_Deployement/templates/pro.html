@@ -1,26 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>pros</title>
+    <meta charset="UTF-8">
+    <title>Professional Prediction | MusPred</title>
 </head>
 
 <body>
-    <h2>Professional Input</h2>
-    <form method="POST">
-        {% for name in [
-        'acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness',
-        'loudness', 'speechiness', 'tempo', 'valence', 'duration_ms',
-        'genre', 'key', 'mode', 'time_signature'] %}
-        {{ name }}: <input type="text" name="{{ name }}"><br><br>
-        {% endfor %}
-        <input type="submit" value="Predict">
+    <h2>Professional Input Form</h2>
+    <form action="/predict_pro" method="post">
+        <label>Genre: <input type="text" name="genre" required></label><br>
+        <label>Key: <input type="text" name="key" required></label><br>
+        <label>Mode: <input type="text" name="mode" required></label><br>
+        <label>Time Signature: <input type="text" name="time_signature" required></label><br>
+        <label>Acousticness: <input type="number" step="0.01" name="acousticness" required></label><br>
+        <label>Danceability: <input type="number" step="0.01" name="danceability" required></label><br>
+        <label>Duration (ms): <input type="number" name="duration_ms" required></label><br>
+        <label>Energy: <input type="number" step="0.01" name="energy" required></label><br>
+        <label>Instrumentalness: <input type="number" step="0.01" name="instrumentalness" required></label><br>
+        <label>Liveness: <input type="number" step="0.01" name="liveness" required></label><br>
+        <label>Loudness: <input type="number" step="0.01" name="loudness" required></label><br>
+        <label>Speechiness: <input type="number" step="0.01" name="speechiness" required></label><br>
+        <label>Tempo: <input type="number" step="0.01" name="tempo" required></label><br>
+        <label>Valence: <input type="number" step="0.01" name="valence" required></label><br>
+
+        <button type="submit">Predict Popularity</button>
     </form>
-    {% if prediction %}
-    <h3>Predicted Popularity: {{ prediction }}</h3>
-    {% endif %}
-    {% if error %}
-    <h3 style="color:red;">{{ error }}</h3>
-    {% endif %}
 </body>
 
 </html>

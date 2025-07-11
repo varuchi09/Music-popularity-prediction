@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
-from model import predict_popularity, interactive_predict_popularity
-
+from main import predict_main, predict_general
 app = Flask(__name__)
 
 @app.route("/")
@@ -20,13 +19,13 @@ def index():
 @app.route("/predict_pro", methods=["POST"])
 def predict_pro():
     form = request.form.to_dict()
-    result = predict_popularity(**form)
+    result = predict_main(**form)
     return f"Predicted Popularity Score (Pro): {result}"
 
 @app.route("/predict_common", methods=["POST"])
 def predict_common():
     form = request.form.to_dict()
-    result = interactive_predict_popularity(form)
+    result = predict_general(**form)
     return f"Predicted Popularity Score (Common): {result}"
 
 if __name__ == "__main__":

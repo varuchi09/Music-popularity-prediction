@@ -83,10 +83,10 @@ def predict_main(genre, key, mode, time_signature, acousticness, danceability, d
 def predict_general(genre, mood, tempo_category, duration_category):
     
     mood_mapping = {
-        'happy': {'valence': 0.8, 'energy': 0.7, 'acousticness': 0.2},
-        'sad': {'valence': 0.3, 'energy': 0.4, 'acousticness': 0.5},
-        'energetic': {'valence': 0.9, 'energy': 0.85, 'acousticness': 0.1},
-        'calm': {'valence': 0.5, 'energy': 0.3, 'acousticness': 0.6}
+        'happy': {'valence': 0.85, 'energy': 0.75, 'acousticness': 0.3},
+        'sad': {'valence': 0.2, 'energy': 0.25, 'acousticness': 0.7},
+        'energetic': {'valence': 0.75, 'energy': 0.9, 'acousticness': 0.15},
+        'calm': {'valence': 0.5, 'energy': 0.35, 'acousticness': 0.8}
     }
 
     tempo_mapping = {
@@ -96,9 +96,9 @@ def predict_general(genre, mood, tempo_category, duration_category):
     }
 
     duration_mapping = {
-        'short': 150000,
+        'short': 90000,
         'medium': 210000,
-        'long': 270000
+        'long': 300000
     }
     
     input_data = pd.DataFrame({
@@ -121,9 +121,9 @@ def predict_general(genre, mood, tempo_category, duration_category):
     prediction = grid_search.predict(input_data)
     return prediction[0]
 
+if __name__ == "__main__":
+    main  = predict_main('Pop', 'C', 'Major', '4/4', 0.2, 0.6, 210000, 0.7, 0.8, 0.1, -5.0, 0.05, 210, 0.8)
+    common = predict_general('pop', 'happy', 'medium', 'medium')
 
-main  = predict_main('Pop', 'C', 'Major', '4/4', 0.2, 0.6, 210000, 0.7, 0.8, 0.1, -5.0, 0.05, 210, 0.8)
-common = predict_general('pop', 'happy', 'medium', 'medium')
-
-print(f"Main Prediction: {main}")
-print(f"General Prediction: {common}")
+    print(f"Main Prediction: {main}")
+    print(f"General Prediction: {common}")

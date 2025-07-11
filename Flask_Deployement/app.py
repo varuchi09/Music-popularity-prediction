@@ -9,8 +9,8 @@ def home():
 @app.route("/index", methods=["GET"])
 def index():
     user_type = request.args.get("type")
-    if user_type == "pro":
-        return render_template("pro.html")
+    if user_type == "professional":
+        return render_template("professional.html")
     elif user_type == "common":
         return render_template("common.html")
     else:

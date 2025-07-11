@@ -5,32 +5,49 @@
     <meta charset="UTF-8">
     <title>Common User Prediction | MusPred</title>
     <link rel="stylesheet" href="../static/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h2>Common User Prediction</h2>
-    <form action="/predict_common" method="post">
-        <label>Genre: <input type="text" name="genre" required></label><br><br>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-top">
+                <a href="/" class="nav-logo">PricePredict</a>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#product">Product</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <label>Mood:</label><br>
-        <label><input type="radio" name="mood" value="happy" required> Happy</label>
-        <label><input type="radio" name="mood" value="sad"> Sad</label>
-        <label><input type="radio" name="mood" value="energetic"> Energetic</label>
-        <label><input type="radio" name="mood" value="calm"> Calm</label><br><br>
+    <div class="container">
+        <h2>Common User Prediction</h2>
+        <form action="/predict_common" method="post">
+            <label>Genre: <input type="text" name="genre" required></label><br><br>
 
-        <label>Tempo Category:</label><br>
-        <label><input type="radio" name="tempo_category" value="slow" required> Slow</label>
-        <label><input type="radio" name="tempo_category" value="medium"> Medium</label>
-        <label><input type="radio" name="tempo_category" value="fast"> Fast</label><br><br>
+            <label>Mood:</label><br>
+            <label><input type="radio" name="mood" value="happy" required> Happy</label>
+            <label><input type="radio" name="mood" value="sad"> Sad</label>
+            <label><input type="radio" name="mood" value="energetic"> Energetic</label>
+            <label><input type="radio" name="mood" value="calm"> Calm</label><br><br>
 
-        <label>Duration Category:</label><br>
-        <label><input type="radio" name="duration_category" value="short" required> Short</label>
-        <label><input type="radio" name="duration_category" value="medium"> Medium</label>
-        <label><input type="radio" name="duration_category" value="long"> Long</label><br><br>
+            <label>Tempo Category:</label><br>
+            <label><input type="radio" name="tempo_category" value="slow" required> Slow</label>
+            <label><input type="radio" name="tempo_category" value="medium"> Medium</label>
+            <label><input type="radio" name="tempo_category" value="fast"> Fast</label><br><br>
 
-        <button type="submit">Predict Popularity</button>
-    </form>
+            <label>Duration Category:</label><br>
+            <label><input type="radio" name="duration_category" value="short" required> Short</label>
+            <label><input type="radio" name="duration_category" value="medium"> Medium</label>
+            <label><input type="radio" name="duration_category" value="long"> Long</label><br><br>
+
+            <button type="submit">Predict Popularity</button>
+        </form>
+    </div>
+    <script src="../static/js/script.js"></script>
 </body>
 
 </html>

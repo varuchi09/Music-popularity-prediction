@@ -1,4 +1,3 @@
-/* General Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +9,24 @@ body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Navbar */
 .navbar {
+    width: 100%;
     background-color: #4CAF50;
     padding: 10px 20px;
     color: white;
+    padding: 10px 50px;
+}
+
+.navbar .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .nav-logo {
@@ -31,7 +40,6 @@ body {
     list-style: none;
     display: flex;
     gap: 15px;
-    margin-top: 10px;
 }
 
 .nav-links li a {
@@ -44,31 +52,33 @@ body {
     text-decoration: underline;
 }
 
-/* Mobile menu toggle button */
 .menu-toggle {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Headings */
 h1,
 h2 {
     margin-bottom: 15px;
     color: #4CAF50;
 }
 
-/* Forms */
 form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
     background-color: white;
-    padding: 20px;
+    padding: 50px 75px;
     border-radius: 8px;
-    max-width: 600px;
-    margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 label {
+    width: 100%;
     display: block;
     margin: 15px 0 5px;
     font-weight: 500;
@@ -93,7 +103,6 @@ output {
     font-weight: 500;
 }
 
-/* Radio Buttons */
 input[type="radio"] {
     margin-right: 5px;
 }
@@ -102,7 +111,6 @@ label input[type="radio"] {
     margin-right: 8px;
 }
 
-/* Buttons */
 button,
 .cta-button {
     background-color: #4CAF50;
@@ -112,7 +120,6 @@ button,
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 15px;
 }
 
 button:hover,
@@ -120,10 +127,29 @@ button:hover,
     background-color: #45a049;
 }
 
-/* Hero Section */
+.container {
+    width: 100%;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     margin: 50px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -131,7 +157,30 @@ button:hover,
     font-size: 18px;
 }
 
-/* Section */
+.hero form {
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0 20px;
+}
+
+#hero,
+#about,
+#product,
+#contact {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 50px 30px;
+}
+
+#product ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
 .section {
     max-width: 800px;
     margin: auto;
@@ -142,16 +191,31 @@ button:hover,
     margin-bottom: 10px;
 }
 
-/* Contact */
-.contact-mail {
-    font-size: 16px;
-}
-
-/* Responsive */
 @media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        font-size: 0.8rem;
+    }
+
+    .navbar {
+
+        padding: 5px 20px;
+    }
+
+    .navbar .nav-container {
+        flex-direction: column;
+    }
+
     .nav-links {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .nav-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .menu-toggle {
@@ -167,5 +231,23 @@ button:hover,
 
     .nav-links.show {
         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+    }
+
+    .hero form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero form button {
+        width: 100%;
     }
 }

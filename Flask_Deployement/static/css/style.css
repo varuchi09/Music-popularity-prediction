@@ -197,6 +197,10 @@ button:hover,
     margin-bottom: 10px;
 }
 
+.container .cta-button{
+    text-decoration: none;
+}
+
 @media (max-width: 600px) {
     body {
         overflow-x: hidden;

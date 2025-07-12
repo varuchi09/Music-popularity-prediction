@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from main import predict_main, predict_general
+
 app = Flask(__name__)
 
 @app.route("/")

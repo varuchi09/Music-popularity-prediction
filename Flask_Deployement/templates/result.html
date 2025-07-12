@@ -10,9 +10,28 @@
 </head>
 
 <body>
-    <h2>Prediction Result for {{ user }}</h2>
-    <p>Predicted Popularity Score: {{ prediction }}</p>
-    <a href="/">Go Back to Home</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-top">
+                <a href="/" class="nav-logo">MusPred</a>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#product">Product</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Prediction Result for {{ user }}</h2>
+        <p>Predicted Popularity Score: <strong>{{ prediction }}</strong></p>
+        <a href="/index?type=professional" class="cta-button">Try as Professional</a>
+        <a href="/index?type=common" class="cta-button">Try as Common User</a>
+
+        <a href="/" class="cta-button">Go Back to Home</a>
+    </div>
+    <script src="../static/js/script.js"></script>
 </body>
 
 </html>

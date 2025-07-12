@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-top">
-                <a href="/" class="nav-logo">PricePredict</a>
+                <a href="/" class="nav-logo">MusPred</a>
                 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             </div>
             <ul class="nav-links" id="navMenu">
@@ -26,14 +26,29 @@
     <div class="container">
         <h2>Professional Input Form</h2>
         <form action="/predict_pro" method="post">
-            <label>Genre: <input type="text" name="genre" required></label><br>
+            <label>Genre:</label>
+            <select name="genre" required>
+                <option value="">-- Select Genre --</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="hip hop">Hip Hop</option>
+                <option value="electronic">Electronic</option>
+                <option value="jazz">Jazz</option>
+                <option value="classical">Classical</option>
+                <option value="country">Country</option>
+                <option value="reggae">Reggae</option>
+                <option value="blues">Blues</option>
+                <option value="metal">Metal</option>
+                <option value="r&b">R&B</option>
+                <option value="folk">Folk</option>
+            </select><br>
 
             <label>Mode:</label><br>
             <div class="options">
                 <label><input type="radio" name="mode" value="Major" required> Major</label>
                 <label><input type="radio" name="mode" value="Minor"> Minor</label>
             </div><br>
-            
+
             <label>Key:</label><br>
             <div class="options">
                 <label><input type="radio" name="key" value="C" required> C</label>

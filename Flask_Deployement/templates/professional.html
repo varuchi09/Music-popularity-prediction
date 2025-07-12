@@ -29,28 +29,34 @@
             <label>Genre: <input type="text" name="genre" required></label><br>
 
             <label>Mode:</label><br>
-            <label><input type="radio" name="mode" value="Major" required> Major</label>
-            <label><input type="radio" name="mode" value="Minor"> Minor</label><br><br>
-
+            <div class="options">
+                <label><input type="radio" name="mode" value="Major" required> Major</label>
+                <label><input type="radio" name="mode" value="Minor"> Minor</label>
+            </div><br>
+            
             <label>Key:</label><br>
-            <label><input type="radio" name="key" value="C" required> C</label>
-            <label><input type="radio" name="key" value="C#"> C#</label>
-            <label><input type="radio" name="key" value="D"> D</label>
-            <label><input type="radio" name="key" value="D#"> D#</label>
-            <label><input type="radio" name="key" value="E"> E</label>
-            <label><input type="radio" name="key" value="F"> F</label>
-            <label><input type="radio" name="key" value="F#"> F#</label>
-            <label><input type="radio" name="key" value="G"> G</label>
-            <label><input type="radio" name="key" value="G#"> G#</label>
-            <label><input type="radio" name="key" value="A"> A</label>
-            <label><input type="radio" name="key" value="A#"> A#</label>
-            <label><input type="radio" name="key" value="B"> B</label><br><br>
+            <div class="options">
+                <label><input type="radio" name="key" value="C" required> C</label>
+                <label><input type="radio" name="key" value="C#"> C#</label>
+                <label><input type="radio" name="key" value="D"> D</label>
+                <label><input type="radio" name="key" value="D#"> D#</label>
+                <label><input type="radio" name="key" value="E"> E</label>
+                <label><input type="radio" name="key" value="F"> F</label>
+                <label><input type="radio" name="key" value="F#"> F#</label>
+                <label><input type="radio" name="key" value="G"> G</label>
+                <label><input type="radio" name="key" value="G#"> G#</label>
+                <label><input type="radio" name="key" value="A"> A</label>
+                <label><input type="radio" name="key" value="A#"> A#</label>
+                <label><input type="radio" name="key" value="B"> B</label>
+            </div><br>
 
             <label>Time Signature:</label><br>
-            <label><input type="radio" name="time_signature" value="3/4" required> 3/4</label>
-            <label><input type="radio" name="time_signature" value="4/4"> 4/4</label>
-            <label><input type="radio" name="time_signature" value="5/4"> 5/4</label>
-            <label><input type="radio" name="time_signature" value="6/8"> 6/8</label><br><br>
+            <div class="options">
+                <label><input type="radio" name="time_signature" value="3/4" required> 3/4</label>
+                <label><input type="radio" name="time_signature" value="4/4"> 4/4</label>
+                <label><input type="radio" name="time_signature" value="5/4"> 5/4</label>
+                <label><input type="radio" name="time_signature" value="6/8"> 6/8</label>
+            </div><br>
 
             <label>Acousticness:
                 <input type="range" name="acousticness" min="0" max="1" step="0.01" value="0.5"

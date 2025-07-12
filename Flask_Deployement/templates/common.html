@@ -29,20 +29,27 @@
             <label>Genre: <input type="text" name="genre" required></label><br><br>
 
             <label>Mood:</label><br>
-            <label><input type="radio" name="mood" value="happy" required> Happy</label>
-            <label><input type="radio" name="mood" value="sad"> Sad</label>
-            <label><input type="radio" name="mood" value="energetic"> Energetic</label>
-            <label><input type="radio" name="mood" value="calm"> Calm</label><br><br>
+            <div class="options">
+                <label><input type="radio" name="mood" value="happy" required> Happy</label>
+                <label><input type="radio" name="mood" value="sad"> Sad</label>
+                <label><input type="radio" name="mood" value="energetic"> Energetic</label>
+                <label><input type="radio" name="mood" value="calm"> Calm</label>
+            </div><br>
 
             <label>Tempo Category:</label><br>
-            <label><input type="radio" name="tempo_category" value="slow" required> Slow</label>
-            <label><input type="radio" name="tempo_category" value="medium"> Medium</label>
-            <label><input type="radio" name="tempo_category" value="fast"> Fast</label><br><br>
+            <div class="options">
+                <label><input type="radio" name="tempo_category" value="slow" required> Slow</label>
+                <label><input type="radio" name="tempo_category" value="medium"> Medium</label>
+                <label><input type="radio" name="tempo_category" value="fast"> Fast</label><br><br>
+            </div><br>
 
             <label>Duration Category:</label><br>
-            <label><input type="radio" name="duration_category" value="short" required> Short</label>
-            <label><input type="radio" name="duration_category" value="medium"> Medium</label>
-            <label><input type="radio" name="duration_category" value="long"> Long</label><br><br>
+            <div class="options">
+
+                <label><input type="radio" name="duration_category" value="short" required> Short</label>
+                <label><input type="radio" name="duration_category" value="medium"> Medium</label>
+                <label><input type="radio" name="duration_category" value="long"> Long</label><br><br>
+            </div><br>
 
             <button type="submit">Predict Popularity</button>
         </form>

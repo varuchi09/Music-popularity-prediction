@@ -50,4 +50,4 @@ def predict_common():
     return render_template("result.html", prediction = result, user = 'Common User')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

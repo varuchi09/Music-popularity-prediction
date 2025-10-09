@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from main import predict_main, predict_general
+import os
 
 app = Flask(__name__)
 
@@ -50,4 +51,5 @@ def predict_common():
     return render_template("result.html", prediction = result, user = 'Common User')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
